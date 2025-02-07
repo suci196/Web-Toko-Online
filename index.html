@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+#carouselExampleCaptions {
+  max-width: 800px; 
+  margin: 20px auto; 
+  border-radius: 15px; 
+  overflow: hidden; 
+  }
+  
+  .carousel-img {
+  width: 100%; 
+  height: 400px;  
+  }
+  
+  .carousel-caption {
+  background: rgba(0, 0, 0, 0.5); 
+  padding: 10px;
+  border-radius: 10px;
+  }
+  
+  .carousel-caption h3 {
+  font-size: 20px; 
+  font-weight: bold;
+  }
+  
+  .carousel-caption p {
+  font-size: 14px; 
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+  filter: invert(100%); 
+  }
+  
+  .carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white; 
+  }
+  
+  .jumbotron {
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  padding: 50px 20px;
+  border-radius: 15px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  margin-top: 20px;
+  }
+  
+  
+  .jumbotron h1 {
+  font-size: 28px; 
+  color: #080008; 
+  margin-bottom: 10px;
+  }
+  
+  .tagline {
+  font-size: 18px;
+  font-style: italic;
+  color: #020004;
+  }
+  
+  .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+  }
+  
+  
+  .container {
+  max-width: 1300px; 
+  margin: 0 auto; 
+  padding: 20px;
+  }
+  
+  .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+  
+    .accordion-button {
+      font-size: 40px;
+      background-color: #f8f9fa;
+    }
+  
+    .accordion-button:not(.collapsed) {
+      color: white;
+    }
+  
+    .accordion-item {
+      border: none;
+      border-bottom: 2px solid #f1f1f1;
+    }
+  
+    .card {
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .card-img-top {
+      border-radius: 10px 10px 0 0;
+      height: 250px;
+      object-fit: cover;
+    }
+  
+    .card-body {
+      padding: 40px;
+    }
+  
+    .card-title {
+      font-size: 24px;
+      color: #070007;
+      font-weight: bold;
+      text-align: center;
+    }
+  
+    .card-text {
+      font-size: 16px;
+      text-align: center;
+      color: #040009;
+    }
+  
+   
+   .navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    padding: 8px 16px; 
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #0b0900 !important;
+    text-decoration: underline;
+  }
+  
+  #footer {
+    background-color: hotpink; 
+    color:white; 
+    padding: 20px 0;
+    }
+    
+    
+    .social-icons a {
+    color: white; 
+    font-size: 24px; 
+    margin: 0 10px; 
+    text-decoration: none;
+    }
+    
+    
+    .social-icons a:hover {
+    color: #f3f2ef; 
+    }
+    
+    
+    .credit {
+    margin-top: 10px;
+    font-size: 14px;
+    }
+    
+    .credit a {
+    color: #f3f1ee;
+    text-decoration: none;
+    }
+    
+    .credit a:hover {
+    text-decoration: underline;
+    }
+  </style>
+          
+<body style="background-color: antiquewhite;">
+ 
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(153, 61, 30);">
+  <div class="container">
+    <img src="image/logo (2).png" alt="Logo" style="height: 40px; margin-right: 10px; border-radius: 2rem;">
+    <a class="navbar-brand" href="#">Flairy Dessert</a>
+
+    <!-- Tombol Hamburger -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#product">Product</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HOME SECTION -->
+<section id="home">
+  <!-- CAROUSEL -->
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="image/banner.png" class="carousel-img" alt="Banner 1">
+        <div class="carousel-caption">
+          <h3>Selamat Datang di Flairy Dessert</h3>
+          <p>Nikmati kue terbaik dengan rasa yang tak terlupakan.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="image/banner.1.png" class="carousel-img" alt="Banner 2">
+        <div class="carousel-caption">
+          <h3>Macaron & Cookies Premium</h3>
+          <p>Dibuat dengan bahan berkualitas tinggi.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="image/banner.2.png" class="carousel-img" alt="Banner 3">
+        <div class="carousel-caption">
+          <h3>Kue Ulang Tahun Custom</h3>
+          <p>Buat momen spesial lebih berkesan.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+
+  <!-- JUMBOTRON -->
+<div class="container">
+  <div class="jumbotron text-center">
+    <h1 class="display-5 fw-bold">Welcome to Flairy Dessert!</h1>
+    <p class="tagline">"Sweetness in Every Moment, Happiness in Every Bite."</p>
+  </div>
+</div>
+ 
+<!-- BESTSELLER SECTION -->
+<div class="container py-4">
+  <h1 class="text-center mb-4" style="font-weight: bold; color: #030003; font-size: 48px;">
+    BEST SELLER
+  </h1>
+  <hr style="border-top: 4px solid #09000a;">
+  <!-- Best Seller Mini Cake-->
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <!-- Mini Cake Card -->
+    <div class="col">
+      <div class="card h-100">
+        <img src="image/minicake.jpeg" class="card-img-top" alt="Mini Cake">
+        <div class="card-body">
+          <h5 class="card-title">Mini Cake</h5>
+          <p class="card-text">Mini Cake dengan berbagai rasa dan dekorasi cantik. Pilihan sempurna untuk hadiah, hampers, atau pesta kecil. Dari rasa blueberry segar hingga cokelat creamy—mana yang jadi favoritmu?</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Croissant Card -->
+    <div class="col">
+      <div class="card h-100">
+        <img src="image/croissant.jpeg" class="card-img-top" alt="Croissant">
+        <div class="card-body">
+          <h5 class="card-title">Croissant</h5>
+          <p class="card-text">Croissant berlapis-lapis dengan tekstur renyah di luar dan lembut di dalam. Dibuat dengan mentega premium untuk rasa yang gurih dan aroma yang menggoda. Nikmati dengan isian cokelat, keju, atau original!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Soft Cookies Card -->
+    <div class="col">
+      <div class="card h-100">
+        <img src="image/softcookies.jpeg" class="card-img-top" alt="Soft Cookies">
+        <div class="card-body">
+          <h5 class="card-title">Soft Cookies</h5>
+          <p class="card-text">Cookies homemade dengan isian cokelat dan topping melimpah. Teksturnya chewy di dalam, renyah di luar. Cocok untuk camilan atau teman minum kopi!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--PRODUCT-->
+<section id="product" class="py-5">
+  <div class="container">
+    <h1 class="text-center mb-4" style="font-weight: bold; margin-top: 50px; color: rgb(11, 1, 6);">
+      PRODUCT
+    </h1>
+    <hr style="border-top: 4px solid #09000a;">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Wedding Cake -->
+      <div class="col-md-4">
+        <div class="card product-card" style="height: 100%; padding: 20px;">
+          <img src="image/weddingcake.jpeg" class="card-img-top" alt="Wedding Cake" style="height: 300px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Wedding Cake</h5>
+            <p class="card-text"><small class="text-body-secondary">RP. 1.000.000</small></p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalWeddingCake">Detail</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Birthday Cake -->
+      <div class="col-md-4">
+        <div class="card product-card" style="height: 100%; padding: 20px;">
+          <img src="image/birthdaycake.jpeg" class="card-img-top" alt="Birthday Cake" style="height: 300px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Birthday Cake</h5>
+            <p class="card-text"><small class="text-body-secondary">RP. 500.000</small></p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBirthdayCake">Detail</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mini Cake -->
+      <div class="col-md-4">
+        <div class="card product-card" style="height: 100%; padding: 20px;">
+          <img src="image/minicake.jpeg" class="card-img-top" alt="Mini Cake" style="height: 300px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Mini Cake</h5>
+            <p class="card-text"><small class="text-body-secondary">RP. 250.000</small></p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalMiniCake">Detail</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Donut -->
+      <div class="col-md-4">
+        <div class="card product-card" style="height: 100%; padding: 20px;">
+          <img src="image/dounat.jpeg" class="card-img-top" alt="Donut" style="height: 300px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Dounat</h5>
+            <p class="card-text"><small class="text-body-secondary">RP. 100.000</small></p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDounat">Detail</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cromboloni -->
+      <div class="col-md-4">
+        <div class="card product-card" style="height: 100%; padding: 20px;">
+          <img src="image/cromboloni.jpeg" class="card-img-top" alt="Cromboloni" style="height: 300px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Cromboloni</h5>
+            <p class="card-text"><small class="text-body-secondary">RP. 150.000</small></p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCromboloni">Detail</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Croissant -->
+      <div class="col-md-4">
+        <div class="card product-card" style="height: 100%; padding: 20px;">
+          <img src="image/croissant.jpeg" class="card-img-top" alt="Croissant" style="height: 300px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Croissant</h5>
+            <p class="card-text"><small class="text-body-secondary">RP. 80.000</small></p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCroissant">Detail</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cookies -->
+      <div class="col-md-4">
+        <div class="card product-card" style="height: 100%; padding: 20px;">
+          <img src="image/cookies.jpeg" class="card-img-top" alt="Cookies" style="height: 300px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Cookies</h5>
+            <p class="card-text"><small class="text-body-secondary">RP. 50.000</small></p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCookies">Detail</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Macaron -->
+      <div class="col-md-4">
+        <div class="card product-card" style="height: 100%; padding: 20px;">
+          <img src="image/macaron.jpeg" class="card-img-top" alt="Macaron" style="height: 300px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Macaron</h5>
+            <p class="card-text"><small class="text-body-secondary">RP. 70.000</small></p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalMacaron">Detail</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Soft Cookies -->
+      <div class="col-md-4">
+        <div class="card product-card" style="height: 100%; padding: 20px;">
+          <img src="image/softcookies.jpeg" class="card-img-top" alt="Soft Cookies" style="height: 300px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Soft Cookies</h5>
+            <p class="card-text"><small class="text-body-secondary">RP. 60.000</small></p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalSoftCookies">Detail</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
+  <!-- Product Modals -->
+  <!-- Modal (Wedding Cake) -->
+  <div class="modal fade" id="modalWeddingCake" tabindex="-1" aria-labelledby="modalWeddingCakeLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color:lightpink;">
+          <h5 class="modal-title" id="modalWeddingCakeLabel">Wedding Cake</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Wedding cake 3 tingkat dengan desain minimalis dan sentuhan emas yang mewah. Dihiasi bunga segar, cocok untuk momen spesial yang berkesan. Bisa custom sesuai tema pernikahan impian Anda!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!--  Modal (BIRTHDAY CAKE) -->
+   <div class="modal fade" id="modalBirthdayCake" tabindex="-1" aria-labelledby="modalBirthdayCakeLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: lightpink;">
+          <h5 class="modal-title" id="modalBirthdayCakeLabel">Birthday Cake</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Birthday Cake cantik dengan desain custom sesuai keinginan Anda! Tekstur lembut, rasa lezat, dan dekorasi yang elegan menjadikan setiap perayaan lebih istimewa.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!--  Modal (Mini Cake) -->
+   <div class="modal fade" id="modalMiniCake" tabindex="-1" aria-labelledby="modalMiniCakeLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: lightpink;">
+          <h5 class="modal-title" id="modalMiniCake">Mini Cake</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Mini Cake dengan berbagai rasa dan dekorasi cantik. Pilihan sempurna untuk hadiah, hampers, atau pesta kecil. Dari rasa blueberry segar hingga cokelat creamy—mana yang jadi favoritmu?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!--  Modal (Dounat) -->
+   <div class="modal fade" id="modalDounat" tabindex="-1" aria-labelledby="modalDounatLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: lightpink;">
+          <h5 class="modal-title" id="modalDounatLabel">Dounat</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Nikmati dounat empuk dengan aneka topping premium seperti cokelat, marshmallow, biskuit, dan sprinkle warna-warni. Setiap gigitan menghadirkan kombinasi rasa yang manis, creamy, dan renyah!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  Modal (Cromboloni) -->
+  <div class="modal fade" id="modalCromboloni" tabindex="-1" aria-labelledby="modalCromboloniLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: lightpink;">
+          <h5 class="modal-title" id="modalCromboloniLabel">Dounat</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Dounat khas Italia dengan tekstur fluffy dan isian krim yang meleleh di setiap gigitan. Tersedia dalam berbagai rasa seperti cokelat, vanilla, dan tiramisu. Sekali coba, pasti ketagihan!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal (Croissant) -->
+  <div class="modal fade" id="modalCroissant" tabindex="-1" aria-labelledby="modalCroissantLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: lightpink;">
+          <h5 class="modal-title" id="modalCroissanttLabel">Croissant</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Croissant berlapis-lapis dengan tekstur renyah di luar dan lembut di dalam. Dibuat dengan mentega premium untuk rasa yang gurih dan aroma yang menggoda. Nikmati dengan isian cokelat, keju, atau original!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!--  Modal (Cookies) -->
+   <div class="modal fade" id="modalCookies" tabindex="-1" aria-labelledby="modalCookiesLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: lightpink;">
+          <h5 class="modal-title" id="modalCookiesLabel">Cookies</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Cookies homemade dengan tekstur chewy di dalam dan renyah di luar. Dipenuhi topping cokelat, kacang, dan isian melimpah. Setiap gigitan penuh kelezatan!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+   <!--  Modal (Macaron) -->
+   <div class="modal fade" id="modalMacaron" tabindex="-1" aria-labelledby="modalMacaronLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: lightpink;">
+          <h5 class="modal-title" id="modalMacaronLabel">Macaron</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Macaron premium dengan kulit renyah dan isian lembut yang lumer di mulut. Hadir dalam berbagai rasa seperti vanilla, cokelat, stroberi, dan matcha. Cemilan elegan yang cocok untuk hadiah atau teman minum teh!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Modal (Soft Cookies) -->
+   <div class="modal fade" id="modalSoftCookies" tabindex="-1" aria-labelledby="modalSoftCookies" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: lightpink;">
+          <h5 class="modal-title" id="modalSoftCookiesLabel">Soft Cookies</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Cookies homemade dengan isian cokelat dan topping melimpah. Teksturnya chewy di dalam, renyah di luar. Cocok untuk camilan atau teman minum kopi!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT SECTION -->
+<section id="about">
+  <div class="container py-5">
+    <h2 class="text-center mb-4" style="font-weight: bold; font-size: 40px; color: #050006;">
+      About Us
+    </h2>
+    <hr style="border-top: 4px solid #09000a;">
+    
+    <!-- Accordion -->
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+
+      <!-- Sejarah -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Sejarah
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+          <div class="accordion-body">
+            <strong>Sejarah Singkat:</strong> Berawal dari kecintaan pada dunia baking, Flairy Dessert lahir untuk menghadirkan kue dan pastry berkualitas dengan rasa yang menggugah selera. Dimulai dari dapur kecil, kini kami tumbuh menjadi pilihan bagi pecinta dessert yang mencari kelezatan dan keindahan dalam satu gigitan.
+          </div>
+        </div>
+      </div>
+
+      <!-- Visi -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Visi
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+          <div class="accordion-body">
+            <strong>Visi Kami:</strong> Menjadi brand dessert yang menghadirkan kebahagiaan dalam setiap momen melalui produk berkualitas dan inovatif.
+          </div>
+        </div>
+      </div>
+
+      <!-- Misi -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Misi
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+          <div class="accordion-body">
+            <strong>Misi Kami:</strong>
+            <ul>
+              <li>Menggunakan bahan berkualitas terbaik untuk menciptakan rasa yang istimewa.</li>
+              <li>Menyediakan variasi dessert yang kreatif dan menarik untuk berbagai kesempatan.</li>
+              <li>Memberikan pelayanan terbaik agar setiap pelanggan merasakan pengalaman manis yang berkesan.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Our Team -->
+    <h2 class="text-center mb-4" style="font-weight: bold; font-size: 40px; color: #0b000c;">
+      Our Team
+    </h2>
+    <div class="row">
+
+      <!-- Management and Administration Team -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0">
+          <img src="image/tim3.jpeg" class="card-img-top" alt="Management and Administration Team">
+          <div class="card-body">
+            <h5 class="card-title text-center" style="font-size: 24px; font-weight: bold; color: #0b000b;">Management and Administration Team</h5>
+            <p class="card-text" style="text-align: center; color: #020004;">Oversees daily operations, finances, and store promotions to ensure smooth business operations.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sales and Customer Service Team -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0">
+          <img src="image/Tim2.jpg" class="card-img-top" alt="Sales and Customer Service Team">
+          <div class="card-body">
+            <h5 class="card-title text-center" style="font-size: 24px; font-weight: bold; color: #070008;">Sales and Customer Service Team</h5>
+            <p class="card-text" style="text-align: center; color: #040008;">Handles customer interactions, processes orders, and ensures customer satisfaction.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Design and Production Team -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0">
+          <img src="image/tim1.jpg" class="card-img-top" alt="Design and Production Team">
+          <div class="card-body">
+            <h5 class="card-title text-center" style="font-size: 24px; font-weight: bold; color: #080008;">Design and Production Team</h5>
+            <p class="card-text" style="text-align: center; color: #020005;">Responsible for creating and decorating cakes to ensure quality and creativity of the products.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Thank You -->
+    <div class="container my-5">
+      <h2 class="text-center mb-4" style="font-weight: bold; font-size: 40px; color: #090009;">
+        Thank you for reading!
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4" style="font-weight:bold; margin-top: 50px; color: rgb(0, 2, 2);">
+      Contact Us
+    </h2>
+    <hr style="border-top: 4px solid #09000a;">
+    <div class="row">
+      <!-- Location Section -->
+      <div class="col-md-6 mb-4">
+        <h5>Our Location</h5>
+        <iframe 
+          width="100%" 
+          height="450" 
+          style="border:0;" 
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.9202900466975!2d-122.08385178469294!3d37.38605197983188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5b8a4f964e3%3A0x509cd7ec2f4d0db9!2sGoogleplex!5e0!3m2!1sen!2sus!4v1695060489604">
+        </iframe>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-md-6 mb-4" style="color: rgb(0, 4, 5);">
+        <h5>Contact Form</h5>
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Name" style="color:rgb(0, 11, 14);">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Email" style="color:rgb(0, 5, 7);">
+          </div>
+          <div class="mb-3">
+            <label for="subject" class="form-label">Subject</label>
+            <input type="text" class="form-control" id="subject" placeholder="Subject" style="color:rgb(1, 9, 11);">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Message" style="color:rgb(18, 5, 0);"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="background-color: rgb(19, 132, 169);">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer" data-aos="fade-up" data-aos-duration="1500">
+  <div class="footer-container text-center">
+    <h1>FLAIRY DESSERT</h1>
+    <p>Thank you for visiting our store!</p>
+
+    <!-- Sosial Media -->
+    <div class="social-icons">
+      <a href="https://youtube.com/@suciindahpiw?si=JfFMNSulxEpYC6iG" target="_blank">
+        <i class="bi bi-youtube"></i>
+      </a>
+      <a href="https://www.instagram.com/scindahx?igsh=NjIweG9rM3YwZGc0" target="_blank">
+        <i class="bi bi-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/suci-indah-pertiwi-97a1a0330?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+        <i class="bi bi-linkedin"></i>
+      </a>
+    </div>
+
+    <!-- Credit -->
+    <p class="credit">
+      <a href="#">Created by Suci Indah Pertiwi</a> | &copy; 2025.
+    </p>
+  </div>
+</footer>
+
+<!-- Bootstrap CSS & Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
